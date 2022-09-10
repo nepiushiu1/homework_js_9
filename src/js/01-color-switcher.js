@@ -8,7 +8,6 @@ start.addEventListener('click', processStart);
 function processStart() {
   intervalId = setInterval(() => {
     background.style.backgroundColor = getRandomHexColor();
-    console.log('проверка');
   }, 1000);
   start.disabled = true;
 }
