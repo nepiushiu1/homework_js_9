@@ -23,8 +23,8 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    const datePicker = Date.parse(selectedDates[0]);
-    console.log(datePicker);
+    // const datePicker = Date.parse(selectedDates[0]);
+    // console.log(datePicker);
     picker = selectedDates[0];
     pastDate(selectedDates[0]);
   },
@@ -49,8 +49,6 @@ function timer() {
     refs.seconds.textContent = seconds;
   }, 1000);
 }
-
-// функция выбора даты
 
 const todayDate = new Date();
 // функция запрета выбора прошедшей даты
