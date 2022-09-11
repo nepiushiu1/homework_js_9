@@ -17,6 +17,19 @@ const refs = {
 refs.start.disabled = true;
 refs.start.addEventListener('click', timer);
 
+const options = {
+  enableTime: true,
+  time_24hr: true,
+  defaultDate: new Date(),
+  minuteIncrement: 1,
+  onClose(selectedDates) {
+    const datePicker = Date.parse(selectedDates[0]);
+    console.log(datePicker);
+    picker = selectedDates[0];
+    pastDate(selectedDates[0]);
+  },
+};
+flatpickr(refs.text, options);
 // функция таймера
 
 function timer() {
@@ -38,20 +51,6 @@ function timer() {
 }
 
 // функция выбора даты
-
-const options = {
-  enableTime: true,
-  time_24hr: true,
-  defaultDate: new Date(),
-  minuteIncrement: 1,
-  onClose(selectedDates) {
-    const datePicker = Date.parse(selectedDates[0]);
-    console.log(datePicker);
-    picker = selectedDates[0];
-    pastDate(selectedDates[0]);
-  },
-};
-flatpickr(refs.text, options);
 
 const todayDate = new Date();
 // функция запрета выбора прошедшей даты
