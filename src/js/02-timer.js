@@ -16,7 +16,7 @@ const refs = {
 };
 refs.start.disabled = true;
 refs.start.addEventListener('click', timer);
-
+let picker = null;
 const options = {
   enableTime: true,
   time_24hr: true,
